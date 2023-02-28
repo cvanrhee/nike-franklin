@@ -249,9 +249,21 @@ main .card-overlay h3 {
   margin-bottom: 2px;
 }
 
-.section .flex-buttons {
+main .section.flex-buttons {
   display: flex;
   flex-direction: row;
   padding-top: 0px;
-  padding-bottom: 0xp;
+  padding-bottom: 0px;
 }
+
+main .section.flex-buttons .default-content-wrapper{
+  display: flex;
+  flex-direction: row;
+  padding: 0px 2px 0px 2px;
+}
+
+main .section.flex-buttons .default-content-wrapper .button-container{
+  flex: 1;
+  margin: .5em;
+}
+
