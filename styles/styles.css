@@ -235,3 +235,14 @@ main .section[data-section-status='initialized'] {
 main .section.highlight {
   background-color: var(--highlight-background-color);
 }
+
+main .card-overlay {
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+main .card-overlay h3 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
