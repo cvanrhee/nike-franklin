@@ -38,6 +38,10 @@ footer .copyright {
   flex: 1;
 }
 
+footer .copyright .grid{
+  justify-content: space-between;
+}
+
 .copyright .grid ul {
   display: flex;
   flex-direction: row;
