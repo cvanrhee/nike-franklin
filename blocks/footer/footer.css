@@ -1,5 +1,5 @@
 footer {
-  padding: 2rem;
+  padding: .5rem;
   background-color: rgb(17,17,17);
   color: var(--text-button-color);
   font-size: var(--body-font-size-s);
@@ -30,9 +30,12 @@ footer .link {
   font-stretch: 100%;
 }
 
-.link > li {
-  margin-bottom: 4px;
+.grid li {
+  text-align: left;
+  margin: 8px;
+  font-size: var(--body-font-size-xs);
 }
+
 
 footer .copyright {
   flex: 1;
@@ -40,6 +43,12 @@ footer .copyright {
 
 footer .copyright .grid{
   justify-content: space-between;
+}
+
+.grid ul {
+  min-width: 250px;
+  min-height: 35px;
+  margin: 0px 0px 0px 8px;
 }
 
 .copyright .grid ul {
