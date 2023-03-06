@@ -18,13 +18,9 @@ footer .grid {
   display: flex;
 }
 
-footer .links {
-  
-}
-
 footer .link {
   flex: 1;
-  margin-right: 16px;
+  /* margin-right: 16px; */
   list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
   font-stretch: 100%;
@@ -35,7 +31,6 @@ footer .link {
   margin: 8px;
   font-size: var(--body-font-size-xs);
 }
-
 
 footer .copyright {
   flex: 1;
@@ -49,6 +44,10 @@ footer .copyright .grid{
   min-width: 250px;
   min-height: 35px;
   margin: 0px 0px 0px 8px;
+}
+
+.grid .link li:not(:first-of-type){
+  color: #7e7e7e;
 }
 
 .copyright .grid ul {
