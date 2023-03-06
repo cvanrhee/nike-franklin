@@ -10,7 +10,6 @@ header nav {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  gap: 0 2em;
   max-width: 1264px;
   height: var(--nav-height);
   font-family: var(--body-font-family);
@@ -26,11 +25,6 @@ header nav[aria-expanded=true] {
 }
 
 @media (min-width: 900px) {
-  header nav {
-    display: flex;
-    justify-content: space-between;
-  }
-
   header nav[aria-expanded=true] {
     min-height: 0;
     overflow: visible;
@@ -127,20 +121,6 @@ header nav[aria-expanded=true] .nav-hamburger-icon::after {
   }
 }
 
-/* brand */
-header .nav-brand {
-  grid-area: brand;
-  flex-basis: 128px;
-  font-size: var(--heading-font-size-xl);
-  font-weight: 700;
-  line-height: 1;
-}
-
-header nav .nav-brand img {
-  width: 128px;
-  height: auto;
-}
-
 /* sections */
 header nav .nav-sections {
   grid-area: sections;
@@ -175,9 +155,8 @@ header nav .nav-sections ul > li > ul > li {
 
 @media (min-width: 900px) {
   header nav .nav-sections {
-    display: block;
-    visibility: visible;
-    white-space: nowrap;
+    display: flex;
+    width: 100%;
   }
 
   header nav[aria-expanded=true] .nav-sections {
@@ -256,13 +235,6 @@ header nav .nav-sections ul > li > ul > li {
   }
 }
 
-/* tools */
-header nav .nav-tools {
-  display: flex;
-  grid-area: tools;
-  justify-content: space-evenly;
-}
-
 /* first header section */
 header .first {
   display: flex;
@@ -279,14 +251,26 @@ header .first {
 header .second {
   display: flex;
   flex-direction: row;
-  font-style: italic;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-header .third {
+header nav .nav-third {
   display: flex;
   flex-direction: row;
   width: 100%;
   bottom: 0;
   position: absolute;
   justify-content: space-evenly;
+  align-items: center;
+  animation: 3s infinite linear scroll;
+  animation-delay: 2s;
+}
+
+/* Animation */
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-1264px); animation-delay: 2s;}
 }
