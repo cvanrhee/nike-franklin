@@ -14,18 +14,14 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   footer.innerHTML = html;
 
-  var links = footer.getElementsByClassName('links')[0];
-  var container = links.getElementsByTagName('div')[0];
+  let links = footer.getElementsByClassName('links')[0];
+  let container = links.getElementsByTagName('div')[0];
   container.className = 'grid';
 
-  var rows = links.getElementsByTagName('ul');
+  let rows = links.getElementsByTagName('ul');
   Array.from(rows).forEach(element => {
     element.className = 'link';
   });
-
-  var copyright = footer.getElementsByClassName('copyright')[0];
-  var container = copyright.getElementsByTagName('div')[0];
-  container.className = 'grid';
 
   await decorateIcons(footer);
   block.append(footer);
