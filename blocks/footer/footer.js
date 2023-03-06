@@ -23,6 +23,10 @@ export default async function decorate(block) {
     element.className = 'link';
   });
 
+  let copyright = footer.getElementsByClassName('copyright')[0];
+  let copyContainer = copyright.getElementsByTagName('div')[0];
+  copyContainer.className = 'grid';
+
   await decorateIcons(footer);
   block.append(footer);
 }
